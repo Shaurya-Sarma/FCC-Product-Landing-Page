@@ -1,0 +1,630 @@
+@font-face {
+  font-family: "Lato_Regular";
+  src: url(../fonts/Lato-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Lato_Bold";
+  src: url(../fonts/Lato-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Lato_Light";
+  src: url(../fonts/Lato-Light.ttf);
+}
+
+@font-face {
+  font-family: "Lato_Thin";
+  src: url(../fonts/Lato-Thin.ttf);
+}
+
+@font-face {
+  font-family: "Lato_Black";
+  src: url(../fonts/Lato-Black.ttf);
+}
+
+header #nav-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  position: fixed;
+  min-height: 8vh;
+  top: 0px;
+  background: #000;
+  font-family: "Lato_Bold", sans-serif;
+  z-index: 5;
+  overflow: hidden;
+}
+
+header #nav-bar .hamburger {
+  display: none;
+}
+
+header #nav-bar .logo {
+  position: relative;
+  max-width: 100%;
+  height: auto;
+}
+
+header #nav-bar .nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 30%;
+}
+
+header #nav-bar .nav-links .nav-link {
+  list-style-type: none;
+  padding: 0px 50px;
+  font-size: 1.2em;
+}
+
+header #nav-bar .nav-links .nav-link a {
+  text-decoration: none;
+  color: white;
+}
+
+header #nav-bar .nav-links .nav-link a:hover {
+  opacity: 0.5;
+}
+
+header #nav-bar .nav-links .nav-link .dropbtn {
+  border: none;
+  outline: none;
+  background-color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+header #nav-bar .nav-links .nav-link .dropbtn i {
+  color: white;
+  display: inline;
+}
+
+header #nav-bar .nav-links .nav-link .dropdown-content {
+  display: none;
+  position: fixed;
+  background-color: #f9f9f9;
+  min-width: 120px;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 5;
+}
+
+header #nav-bar .nav-links .nav-link .dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-size: 0.8em;
+}
+
+header #nav-bar .nav-links .nav-link .dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+header #nav-bar .nav-links .nav-link .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+header .overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+header .overlay .overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+header .overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  font-family: "Lato_Bold";
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header .overlay a:hover {
+  color: #f9f9f9;
+  text-decoration: underline;
+  font-size: 45px;
+}
+
+header .overlay .closebtn {
+  position: absolute;
+  top: 16vh;
+  left: 5%;
+  color: white;
+  -webkit-transition: 0.5;
+  transition: 0.5;
+  font-size: 60px;
+}
+
+header .overlay .closebtn:hover {
+  font-size: 70px;
+  text-decoration: none;
+  color: red;
+}
+
+main {
+  overflow: hidden;
+}
+
+main .video-container {
+  width: 100%;
+  margin: 150px 0px 50px 0px;
+  text-align: center;
+}
+
+main .video-container .video {
+  width: 560px;
+  height: 315px;
+  border: 2px outset #aa00ff;
+}
+
+main .quotation {
+  background-color: #663dff;
+  background-image: linear-gradient(319deg, #613ee2 0%, #aa00ff 37%, #cc4499 100%);
+}
+
+main .quotation blockquote {
+  color: white;
+  font-family: "Lato_Black";
+  text-align: center;
+  padding: 120px 50px;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+}
+
+main .quotation blockquote .main-quote {
+  font-size: 3.8em;
+  padding-bottom: 30px;
+}
+
+main .quotation blockquote .citation {
+  font-size: 1.8em;
+}
+
+main .banner {
+  background: black;
+}
+
+main .banner .img-section {
+  width: 100%;
+}
+
+main .banner figcaption {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+main .banner .headline {
+  font-family: "Lato_Bold", sans-serif;
+  font-size: 5em;
+  position: relative;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+  bottom: 25vh;
+  left: 10%;
+}
+
+main .banner #headset {
+  background: -webkit-gradient(linear, left top, right top, from(#00f260), to(#0575e6));
+  background: linear-gradient(to right, #00f260, #0575e6);
+  background-clip: initial;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+main .banner #controllers {
+  background: -webkit-gradient(linear, left top, right top, from(#cc36c7), color-stop(#e94057), to(#f27121));
+  background: linear-gradient(to right, #cc36c7, #e94057, #f27121);
+  background-clip: initial;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+main .banner #basestation {
+  background: -webkit-gradient(linear, left top, right top, from(#f8b500), to(#fceabb));
+  background: linear-gradient(to right, #f8b500, #fceabb);
+  background-clip: initial;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+main .banner #store {
+  background: -webkit-gradient(linear, left top, right top, from(#fc00ff), to(#00dbde));
+  background: linear-gradient(to right, #fc00ff, #00dbde);
+  background-clip: initial;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+main .product-description {
+  background-color: black;
+}
+
+main .product-description .description-wrapper {
+  padding: 5vw 15vw;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: "intro intro intro" "column1 column2 column3" "column1 column2 column3";
+}
+
+main .product-description .description-wrapper .intro {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: intro;
+  font-weight: bold;
+}
+
+main .product-description .description-wrapper .column1 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: column1;
+}
+
+main .product-description .description-wrapper .column2 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: column2;
+}
+
+main .product-description .description-wrapper .column3 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  grid-area: column3;
+}
+
+main .product-description .description-wrapper p {
+  color: #fff;
+  font-family: "Lato_Light", sans-serif;
+  padding: 10px;
+}
+
+main .product-description .description-wrapper h2 {
+  font-family: "Lato_Black";
+  padding: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: -webkit-gradient(linear, left top, right top, from(#b6adc9), to(#eeeaf3));
+  background: linear-gradient(to right, #b6adc9, #eeeaf3);
+  background-clip: initial;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+main .preorder-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  background: #5733da;
+  background: -webkit-gradient(linear, left top, right top, from(#5733da), to(#74ebd5));
+  background: linear-gradient(to right, #5733da 0% #8edbe0 37%, #74ebd5 100%);
+  padding: 75px 40px;
+}
+
+main .preorder-form .form-title {
+  word-wrap: break-word;
+  margin-bottom: 20px;
+  font-size: 2.8em;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+  font-family: "Lato_Bold";
+  color: white;
+}
+
+main .preorder-form #form legend {
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+  color: white;
+  font-family: "Lato_Regular";
+}
+
+main .preorder-form #form fieldset {
+  border-style: none;
+}
+
+main .preorder-form #form fieldset #email {
+  margin: 20px 0px 20px 0px;
+  max-width: 275px;
+  width: 100%;
+  font-family: "Lato_Light";
+  border-radius: 5px;
+  padding: 8px;
+  border: 1px outset #bbb;
+}
+
+main .preorder-form #form fieldset #submit {
+  padding: 10px 15px 11px;
+  font-size: 18px;
+  background-color: #57d6c7;
+  font-family: "Lato_Black";
+  text-shadow: 1px 1px #a5cec9;
+  color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #57d6c7;
+  cursor: pointer;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+          box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+}
+
+main .preorder-form #form fieldset #submit:hover {
+  -webkit-box-shadow: 0 8px 16px 0 rgba(252, 248, 248, 0.822) inset;
+          box-shadow: 0 8px 16px 0 rgba(252, 248, 248, 0.822) inset;
+}
+
+main .purchase-img {
+  display: block;
+  margin: 0px auto 50px auto;
+  width: 50%;
+}
+
+main .purchase-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .purchase-info .purchase-card {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.5);
+          box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.5);
+  border: 1px solid lightgray;
+  border-top: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 25%;
+  margin: 20px;
+}
+
+main .purchase-info .purchase-card:hover {
+  -webkit-box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.5);
+          box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.5);
+}
+
+main .purchase-info .purchase-card .card-title {
+  font-family: "Lato_Black";
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+  color: white;
+  background: -webkit-gradient(linear, left top, right top, from(#74ebd5), color-stop(#78a1d6), to(#ff0080));
+  background: linear-gradient(to right, #74ebd5, #78a1d6, #ff0080);
+  font-size: 1.1em;
+  width: 100%;
+  padding: 15px 0px;
+}
+
+main .purchase-info .purchase-card .price {
+  font-family: "Lato_Bold";
+  color: lightgray;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+  padding: 10px 0px;
+}
+
+main .purchase-info .purchase-card .price:hover {
+  text-decoration: underline;
+}
+
+main .purchase-info .purchase-card ol {
+  font-family: "Lato_Light";
+  list-style: none;
+  color: white;
+}
+
+main .purchase-info .purchase-card ol li {
+  padding: 5px 0px;
+}
+
+main .purchase-info .purchase-card .btn {
+  padding: 10px 15px 11px;
+  font-size: 18px;
+  background-color: #e0ba3c;
+  font-family: "Lato_Black";
+  text-shadow: 1px 1px #a5cec9;
+  color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #e0ba3c;
+  cursor: pointer;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+          box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  margin: 10px 0px 20px 0px;
+}
+
+main .purchase-info .purchase-card .btn:hover {
+  padding: 10px 15px 11px;
+  font-size: 18px;
+  background-color: #f7bf07;
+  font-family: "Lato_Black";
+  text-shadow: 1px 1px #a5cec9;
+  color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #f7bf07;
+  cursor: pointer;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+          box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -webkit-box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.822) inset;
+          box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.822) inset;
+}
+
+main .invisible {
+  visibility: hidden;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  background: black;
+}
+
+@media only screen and (max-width: 1024px) {
+  header #nav-bar .nav-links .nav-link {
+    font-size: 1em;
+    padding: 0px 30px;
+  }
+  main .banner .headline {
+    font-size: 4.6em;
+  }
+  main .product-description .description-wrapper p {
+    font-size: 0.85em;
+  }
+  main .product-description .description-wrapper h2 {
+    font-size: 1.2em;
+  }
+  main .purchase-info .purchase-card .card-title {
+    font-size: 0.9em;
+  }
+  main .purchase-info .purchase-card li {
+    font-size: 0.8em;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  main .purchase-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: auto;
+  }
+  main .purchase-info .purchase-card {
+    width: 40%;
+  }
+  main .purchase-info .purchase-card .card-title {
+    font-size: 1.1em;
+  }
+  main .purchase-info .purchase-card li {
+    font-size: 0.95em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header #nav-bar .logo {
+    margin: auto;
+  }
+  header #nav-bar .hamburger {
+    display: block;
+    float: right;
+    margin: auto;
+    font-size: 2em;
+    color: white;
+  }
+  header #nav-bar .hamburger:hover {
+    color: #be18be;
+  }
+  header #nav-bar .nav-links {
+    display: none;
+  }
+  main .banner .headline {
+    font-size: 3.2em;
+  }
+  main .product-description .description-wrapper p {
+    font-size: 0.75em;
+  }
+  main .product-description .description-wrapper h2 {
+    font-size: 1em;
+  }
+  main .purchase-info .purchase-card .card-title {
+    font-size: 0.8em;
+  }
+  main .purchase-info .purchase-card li {
+    font-size: 0.8em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  main .video-container .video {
+    width: 420px;
+    height: 236px;
+  }
+  main .banner .headline {
+    font-size: 2em;
+  }
+  main .product-description .description-wrapper p {
+    font-size: 0.7em;
+  }
+  main .product-description .description-wrapper h2 {
+    font-size: 0.9em;
+  }
+}
+
+/* 
+Credit:
+Dropdown Nav & Hamburger Nav: https://www.w3schools.com/
+3D Text Shadow: http://markdotto.com/playground/3d-text/
+Gradients: https://uigradients.com
+Other Text Shadows: https://designshack.net/articles/css/12-fun-css-text-shadows-you-can-copy-and-paste/
+Submit Button: https://www.formstack.com/blog/2010/customize-form-buttons-with-css/
+*/
+/*# sourceMappingURL=styles.css.map */

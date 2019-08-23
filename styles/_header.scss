@@ -1,0 +1,131 @@
+header {
+  #nav-bar {
+    @include flexCenter(space-around);
+    width: 100%;
+    position: fixed;
+    min-height: 8vh;
+    top: 0px;
+    background: #000;
+    font-family: "Lato_Bold", sans-serif;
+    z-index: 5;
+    overflow: hidden;
+
+    .hamburger {
+      display: none;
+    }
+
+    .logo {
+      position: relative;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      width: 30%;
+
+      .nav-link {
+        list-style-type: none;
+        padding: 0px 50px;
+        font-size: 1.2em;
+
+        a {
+          text-decoration: none;
+          color: $nav-link-color;
+
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+
+        .dropbtn {
+          border: none;
+          outline: none;
+          background-color: inherit;
+          font-family: inherit;
+          font-size: inherit;
+
+          i {
+            color: $nav-link-color;
+            display: inline;
+          }
+        }
+
+        .dropdown-content {
+          display: none;
+          position: fixed;
+          background-color: #f9f9f9;
+          min-width: 120px;
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          z-index: 5;
+          a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            font-size: 0.8em;
+            &:hover {
+              background-color: #ddd;
+            }
+          }
+        }
+
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+
+    .overlay-content {
+      position: relative;
+      top: 25%;
+      width: 100%;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    a {
+      padding: 8px;
+      text-decoration: none;
+      font-size: 36px;
+      color: #818181;
+      font-family: "Lato_Bold";
+      display: block;
+      transition: 0.3s;
+      &:hover {
+        color: #f9f9f9;
+        text-decoration: underline;
+        font-size: 45px;
+      }
+    }
+
+    .closebtn {
+      position: absolute;
+      top: 16vh;
+      left: 5%;
+      color: white;
+      transition: 0.5;
+      font-size: 60px;
+      &:hover {
+        font-size: 70px;
+        text-decoration: none;
+        color: red;
+      }
+    }
+  }
+}

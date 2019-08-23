@@ -1,0 +1,38 @@
+@mixin flexCenter($content-justify) {
+  display: flex;
+  align-items: center;
+  justify-content: $content-justify;
+}
+
+@mixin textGradient($headline-gradient-color) {
+  background: $headline-gradient-color;
+  background-clip: initial;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin MarkDotto3DText() {
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9,
+    0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
+    0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
+    0 20px 20px rgba(0, 0, 0, 0.15);
+}
+
+@mixin secondaryTextShadow() {
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1),
+    0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+@mixin btnStyle($color) {
+  padding: 10px 15px 11px;
+  font-size: 18px;
+  background-color: $color;
+  font-family: "Lato_Black";
+  text-shadow: 1px 1px rgb(165, 206, 201);
+  color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid $color;
+  cursor: pointer;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+}

@@ -1,0 +1,245 @@
+main {
+  overflow: hidden;
+  .video-container {
+    width: 100%;
+    margin: 150px 0px 50px 0px;
+    text-align: center;
+
+    .video {
+      width: $video-width;
+      height: $video-height;
+      border: 2px outset #aa00ff;
+    }
+  }
+
+  .quotation {
+    background-color: #663dff;
+    background-image: linear-gradient(
+      319deg,
+      #613ee2 0%,
+      #aa00ff 37%,
+      #cc4499 100%
+    );
+
+    blockquote {
+      color: white;
+      font-family: "Lato_Black";
+      text-align: center;
+      padding: 120px 50px;
+      @include MarkDotto3DText();
+      .main-quote {
+        font-size: 3.8em;
+        padding-bottom: 30px;
+      }
+      .citation {
+        font-size: 1.8em;
+      }
+    }
+  }
+
+  .banner {
+    background: black;
+    .img-section {
+      width: 100%;
+    }
+
+    figcaption {
+      width: fit-content;
+    }
+
+    .headline {
+      font-family: "Lato_Bold", sans-serif;
+      font-size: 5em;
+      position: relative;
+      @include secondaryTextShadow();
+      bottom: 25vh;
+      left: 10%;
+    }
+
+    #headset {
+      @include textGradient(linear-gradient(to right, #00f260, #0575e6));
+    }
+
+    #controllers {
+      @include textGradient(
+        linear-gradient(to right, rgb(204, 54, 199), #e94057, #f27121)
+      );
+    }
+
+    #basestation {
+      @include textGradient(linear-gradient(to right, #f8b500, #fceabb));
+    }
+
+    #store {
+      @include textGradient(linear-gradient(to right, #fc00ff, #00dbde));
+    }
+  }
+
+  .product-description {
+    background-color: black;
+    .description-wrapper {
+      padding: 5vw 15vw;
+      display: grid;
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+        "intro intro intro"
+        "column1 column2 column3"
+        "column1 column2 column3";
+
+      .intro {
+        grid-area: intro;
+        font-weight: bold;
+      }
+
+      .column1 {
+        grid-area: column1;
+      }
+
+      .column2 {
+        grid-area: column2;
+      }
+
+      .column3 {
+        grid-area: column3;
+      }
+
+      p {
+        color: #fff;
+        font-family: "Lato_Light", sans-serif;
+        padding: 10px;
+      }
+
+      h2 {
+        font-family: "Lato_Black";
+        padding: 10px;
+        width: fit-content;
+        @include textGradient(linear-gradient(to right, #b6adc9, #eeeaf3));
+      }
+    }
+  }
+
+  .preorder-form {
+    @include flexCenter(center);
+    flex-direction: column;
+    text-align: center;
+    background: #5733da;
+    background: linear-gradient(to right, #5733da 0% #8edbe0 37%, #74ebd5 100%);
+    padding: 75px 40px;
+
+    .form-title {
+      word-wrap: break-word;
+      margin-bottom: 20px;
+      font-size: 2.8em;
+      @include secondaryTextShadow();
+      font-family: "Lato_Bold";
+      color: white;
+    }
+
+    #form {
+      legend {
+        @include secondaryTextShadow();
+        color: white;
+        font-family: "Lato_Regular";
+      }
+
+      fieldset {
+        border-style: none;
+
+        #email {
+          margin: 20px 0px 20px 0px;
+          max-width: 275px;
+          width: 100%;
+          font-family: "Lato_Light";
+          border-radius: 5px;
+          padding: 8px;
+          border: 1px outset #bbb;
+        }
+
+        #submit {
+          @include btnStyle(#57d6c7);
+          &:hover {
+            box-shadow: 0 8px 16px 0 rgba(252, 248, 248, 0.822) inset;
+          }
+        }
+      }
+    }
+  }
+
+  .purchase-img {
+    display: block;
+    margin: 0px auto 50px auto;
+    width: 50%;
+  }
+
+  .purchase-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .purchase-card {
+      box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.5);
+      border: 1px solid lightgray;
+      border-top: none;
+      transition: 0.3s;
+      border-radius: 2px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      width: 25%;
+      margin: 20px;
+      &:hover {
+        box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.5);
+      }
+
+      .card-title {
+        font-family: "Lato_Black";
+        @include secondaryTextShadow();
+        color: white;
+        background: linear-gradient(
+          to right,
+          #74ebd5,
+          rgb(120, 161, 214),
+          #ff0080
+        );
+        font-size: 1.1em;
+        width: 100%;
+        padding: 15px 0px;
+      }
+
+      .price {
+        font-family: "Lato_Bold";
+        color: lightgray;
+        @include secondaryTextShadow();
+        padding: 10px 0px;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      ol {
+        font-family: "Lato_Light";
+        list-style: none;
+        color: white;
+
+        li {
+          padding: 5px 0px;
+        }
+      }
+
+      .btn {
+        @include btnStyle(#e0ba3c);
+        margin: 10px 0px 20px 0px;
+        &:hover {
+          @include btnStyle(#f7bf07);
+          box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.822) inset;
+        }
+      }
+    }
+  }
+
+  .invisible {
+    visibility: hidden;
+  }
+}

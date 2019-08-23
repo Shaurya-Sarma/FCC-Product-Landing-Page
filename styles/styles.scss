@@ -1,0 +1,165 @@
+@import "./variables";
+@import "./mixins";
+@import "./fonts";
+
+@import "./header";
+@import "./main";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: black;
+}
+
+@media only screen and (max-width: 1024px) {
+  header {
+    #nav-bar {
+      .nav-links {
+        .nav-link {
+          font-size: 1em;
+          padding: 0px 30px;
+        }
+      }
+    }
+  }
+  main {
+    .banner {
+      .headline {
+        font-size: 4.6em;
+      }
+    }
+    .product-description {
+      .description-wrapper {
+        p {
+          font-size: 0.85em;
+        }
+        h2 {
+          font-size: 1.2em;
+        }
+      }
+    }
+    .purchase-info {
+      .purchase-card {
+        .card-title {
+          font-size: 0.9em;
+        }
+        li {
+          font-size: 0.8em;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  main {
+    .purchase-info {
+      flex-direction: column;
+      align-items: center;
+      margin: auto;
+      .purchase-card {
+        width: 40%;
+        .card-title {
+          font-size: 1.1em;
+        }
+        li {
+          font-size: 0.95em;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    #nav-bar {
+      .logo {
+        margin: auto;
+      }
+      .hamburger {
+        display: block;
+        float: right;
+        margin: auto;
+        font-size: 2em;
+        color: white;
+        &:hover {
+          color: rgb(190, 24, 190);
+        }
+      }
+      .nav-links {
+        display: none;
+      }
+    }
+  }
+
+  main {
+    .banner {
+      .headline {
+        font-size: 3.2em;
+      }
+    }
+    .product-description {
+      .description-wrapper {
+        p {
+          font-size: 0.75em;
+        }
+        h2 {
+          font-size: 1em;
+        }
+      }
+    }
+    .purchase-info {
+      .purchase-card {
+        .card-title {
+          font-size: 0.8em;
+        }
+        li {
+          font-size: 0.8em;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    .video-container {
+      .video {
+        width: 420px;
+        height: 236px;
+      }
+    }
+
+    .banner {
+      .headline {
+        font-size: 2em;
+      }
+    }
+
+    .product-description {
+      .description-wrapper {
+        p {
+          font-size: 0.7em;
+        }
+        h2 {
+          font-size: 0.9em;
+        }
+      }
+    }
+  }
+}
+/* 
+Credit:
+Dropdown Nav & Hamburger Nav: https://www.w3schools.com/
+3D Text Shadow: http://markdotto.com/playground/3d-text/
+Gradients: https://uigradients.com
+Other Text Shadows: https://designshack.net/articles/css/12-fun-css-text-shadows-you-can-copy-and-paste/
+Submit Button: https://www.formstack.com/blog/2010/customize-form-buttons-with-css/
+*/
